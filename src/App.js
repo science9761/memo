@@ -1,7 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
 import { useState } from 'react';
-import { configure } from '@testing-library/react';
 
 function App() {
   const [list, setList] = useState(["푸린", "푸린이", '무소속두', "고트", '휘떄']);
