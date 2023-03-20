@@ -9,6 +9,14 @@ function App() {
   function changeValue(state) {
     setValue(state.target.value)
   }
+
+  function updateList(){
+    if(value !== ""){
+      console.log('value는 빈칸이 아니야!');
+      setList(list.concat(value));
+    }
+  }
+
   return (
     <div className="App">
       <header className="App-header">
@@ -18,7 +26,7 @@ function App() {
         }
         <div>
           <input value={value} onChange={changeValue} />
-          <button onClick={() => setList(list.concat(value))}>케케켘</button>
+          <button onClick={() => updateList()}>추가</button>
         </div>
       </header>
     </div>
