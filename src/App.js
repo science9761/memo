@@ -7,13 +7,13 @@ function App() {
   const [value, setValue] = useState('0000000000000');
 
   function changeValue(state) {
-    setValue(state.target.value)
+    setValue(state.target.value);
   }
 
   function updateList(){
     if(value !== ""){
       console.log('value는 빈칸이 아니야!');
-      setList(list.concat(value));
+      setList([...new Set(list.concat(value))]);
     }
   }
 
